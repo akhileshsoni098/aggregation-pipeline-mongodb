@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
-const express = require ('express')
-const route = require('./route')
+const mongoose = require("mongoose");
+const express = require("express");
+const route = require("./route");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 mongoose
   .connect(
@@ -23,4 +23,3 @@ app.use("/", route);
 app.listen(process.env.PORT || 3000, () => {
   console.log(`App is running on port 3000`);
 });
-
